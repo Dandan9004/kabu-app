@@ -1,0 +1,117 @@
+{
+ "as_of": "2026-11-06",
+ "stocks": {
+  "0001": {
+   "name": "あおば電子",
+   "sector": "半導体",
+   "close": 1000.0,
+   "change_pct": 0.3,
+   "fundamental": 4,
+   "investor": null
+  },
+  "0002": {
+   "name": "こはく精機",
+   "sector": "半導体",
+   "close": 1000.0,
+   "change_pct": 0.3,
+   "fundamental": 4,
+   "investor": null
+  },
+  "0003": {
+   "name": "しずく銀行",
+   "sector": "銀行",
+   "close": 1000.0,
+   "change_pct": 0.3,
+   "fundamental": 3,
+   "investor": null
+  },
+  "0004": {
+   "name": "つばさ自動車",
+   "sector": "輸送用機器",
+   "close": 1000.0,
+   "change_pct": 0.3,
+   "fundamental": 4,
+   "investor": null
+  },
+  "0005": {
+   "name": "ルミナ製作所",
+   "sector": "半導体",
+   "close": 1000.0,
+   "change_pct": 0.3,
+   "fundamental": 3,
+   "investor": null
+  },
+  "0006": {
+   "name": "かえで薬品",
+   "sector": "医薬品",
+   "close": 1000.0,
+   "change_pct": -4.2,
+   "fundamental": 2,
+   "investor": null,
+   "bad": true,
+   "disclosures": [
+    {
+     "date": "2026-11-06",
+     "title": "今期の利益予想を2割下げた"
+    }
+   ]
+  },
+  "0007": {
+   "name": "ほたる電力",
+   "sector": "電気・ガス",
+   "close": 1000.0,
+   "change_pct": -1.8,
+   "fundamental": 3,
+   "investor": 1,
+   "bad": true,
+   "investor_events": [
+    {
+     "date": "2026-11-04",
+     "filer": "あさひパートナーズ",
+     "before": 7.1,
+     "after": 4.9
+    }
+   ]
+  },
+  "0008": {
+   "name": "なぎさ商事",
+   "sector": "卸売",
+   "close": 1000.0,
+   "change_pct": 1.2,
+   "fundamental": 4,
+   "investor": 4,
+   "disclosures": [
+    {
+     "date": "2026-11-06",
+     "title": "自社株買いを決めた"
+    }
+   ]
+  },
+  "0009": {
+   "name": "ゆずリテール",
+   "sector": "小売",
+   "close": 1000.0,
+   "change_pct": 0.3,
+   "fundamental": 3,
+   "investor": null
+  },
+  "0010": {
+   "name": "いぶき通信",
+   "sector": "情報・通信",
+   "close": 1000.0,
+   "change_pct": 0.3,
+   "fundamental": 5,
+   "investor": null
+  },
+  "0011": {
+   "name": "つばき化学",
+   "sector": "化学",
+   "fundamental": 3
+  },
+  "0012": {
+   "name": "ツバメ運輸",
+   "sector": "陸運",
+   "fundamental": 3
+  }
+ }
+}

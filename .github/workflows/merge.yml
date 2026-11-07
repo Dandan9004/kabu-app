@@ -1,0 +1,53 @@
+# The Claude routine pushes evaluations to claude/eval-<date>. Check them, merge to main, publish, tell Discord.
+name: merge-evaluations
+on:
+  push:
+    branches: ["claude/eval-*"]
+
+permissions:
+  contents: write
+
+concurrency: pages-data
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r pipeline/requirements.txt
+      - name: Which week
+        id: day
+        run: echo "day=${GITHUB_REF_NAME#claude/eval-}" >> "$GITHUB_OUTPUT"
+      - name: Check the evaluations
+        working-directory: pipeline
+        run: python -m kabu.validate evaluations/${{ steps.day.outputs.day }}.json dossiers/${{ steps.day.outputs.day }}/picks.json
+      - name: Merge into main
+        run: |
+          git config user.name "kabu-bot"
+          git config user.email "kabu-bot@users.noreply.github.com"
+          git checkout main
+          git merge --ff-only "origin/${GITHUB_REF_NAME}" || git merge --no-edit "origin/${GITHUB_REF_NAME}"
+          git push origin main
+      - run: git fetch origin gh-pages && git worktree add pipeline/out origin/gh-pages
+      - working-directory: pipeline
+        run: python -m kabu.pipeline merge ${{ steps.day.outputs.day }}
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: pipeline/out
+          force_orphan: true
+          exclude_assets: ".git"
+      - name: Tell Discord
+        if: always()
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          OUTCOME: ${{ job.status }}
+        run: |
+          [ -z "$DISCORD_WEBHOOK" ] && exit 0
+          if [ "$OUTCOME" = "success" ]; then msg="株アプリ：今週の話題10の評価が届きました。"; else msg="株アプリ：今週の評価の取り込みに失敗しました。相棒に見てもらってね。"; fi
+          curl -s -H "Content-Type: application/json" -d "{\"content\":\"$msg\"}" "$DISCORD_WEBHOOK"

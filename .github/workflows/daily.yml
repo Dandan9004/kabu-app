@@ -1,0 +1,45 @@
+# Every morning ~6:17 JST: company list, announcements and rule-based scores → GitHub Pages. No AI.
+name: daily
+on:
+  schedule:
+    - cron: "17 21 * * *"   # 21:17 UTC = 6:17 JST; off the hour, which runs late
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: pages-data
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bring back yesterday's published data
+        run: git fetch origin gh-pages && git worktree add pipeline/out origin/gh-pages || mkdir -p pipeline/out
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+      - run: pip install -r pipeline/requirements.txt
+      - name: Run
+        working-directory: pipeline
+        env:
+          EDINET_KEY: ${{ secrets.EDINET_KEY }}
+          STOOQ_KEY: ${{ secrets.STOOQ_KEY }}
+        run: python -m kabu.pipeline daily
+      - name: Publish (gh-pages is overwritten, so history does not pile up)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: pipeline/out
+          force_orphan: true
+          exclude_assets: ".git"
+      - name: Tell Discord when something broke
+        if: failure()
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: |
+          [ -n "$DISCORD_WEBHOOK" ] && curl -s -H "Content-Type: application/json" \
+            -d '{"content":"株アプリ：毎朝のデータ集めが失敗しました。相棒に見てもらってね。"}' "$DISCORD_WEBHOOK" || true

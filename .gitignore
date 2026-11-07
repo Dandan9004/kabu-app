@@ -1,0 +1,13 @@
+.gradle/
+.idea/
+.kotlin/
+build/
+local.properties
+*.iml
+captures/
+backups/
+
+# Pipeline: published data lives on the gh-pages branch
+pipeline/out/
+__pycache__/
+.pytest_cache/
