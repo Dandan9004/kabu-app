@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Bring back yesterday's published data
-        run: git fetch origin gh-pages && git worktree add pipeline/out origin/gh-pages || mkdir -p pipeline/out
+        run: git clone -q --depth 1 --branch gh-pages "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" pipeline/out && rm -rf pipeline/out/.git || mkdir -p pipeline/out
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -29,13 +29,14 @@ jobs:
           EDINET_KEY: ${{ secrets.EDINET_KEY }}
           STOOQ_KEY: ${{ secrets.STOOQ_KEY }}
         run: python -m kabu.pipeline daily
-      - name: Publish (gh-pages is overwritten, so history does not pile up)
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: pipeline/out
-          force_orphan: true
-          exclude_assets: ".git"
+      - name: Publish to gh-pages (overwritten each time, so history does not pile up)
+        working-directory: pipeline/out
+        run: |
+          touch .nojekyll
+          git init -q -b gh-pages
+          git add -A
+          git -c user.name=kabu-bot -c user.email=kabu-bot@users.noreply.github.com commit -qm "data $(date +%F)"
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
       - name: Tell Discord when something broke
         if: failure()
         env:

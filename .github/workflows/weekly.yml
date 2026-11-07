@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: git fetch origin gh-pages && git worktree add pipeline/out origin/gh-pages || mkdir -p pipeline/out
+      - run: git clone -q --depth 1 --branch gh-pages "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" pipeline/out && rm -rf pipeline/out/.git || mkdir -p pipeline/out
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
