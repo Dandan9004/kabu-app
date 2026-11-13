@@ -1,0 +1,37 @@
+{
+ "schema_version": 1,
+ "generated_at": "2026-11-14T06:57:03+09:00",
+ "as_of": "2026-11-14",
+ "sources": {
+  "companies": {
+   "ok": true,
+   "last_ok": "2026-11-14",
+   "failing_since": ""
+  },
+  "tdnet": {
+   "ok": true,
+   "last_ok": "2026-11-14",
+   "failing_since": ""
+  },
+  "prices": {
+   "ok": true,
+   "last_ok": "",
+   "failing_since": ""
+  },
+  "edinet": {
+   "ok": true,
+   "last_ok": "",
+   "failing_since": ""
+  },
+  "financials": {
+   "ok": true,
+   "last_ok": "",
+   "failing_since": ""
+  }
+ },
+ "files": {
+  "weekly": "weekly/latest.json",
+  "scores": "scores_all.json",
+  "track": "track.json"
+ }
+}
