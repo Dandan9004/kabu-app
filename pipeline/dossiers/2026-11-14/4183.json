@@ -1,0 +1,122 @@
+{
+ "code": "4183",
+ "name": "三井化学",
+ "sector": "化学",
+ "market": "プライム（内国株式）",
+ "media_count": 42,
+ "news": [
+  {
+   "count": 7,
+   "date": "2026-11-13",
+   "title": "三井化学、JSRを買収へ…半導体材料の売上規模で国内トップ級めざす",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9HS0tKRHBaTGQ4ZkdUN3hXTms4cTJ4c3U1QVk4a2JsNjQ3Tmpod2ZkNUlpZ0R4bmpZV0xuZHVCUEN5Q2VqV1NucWhmMUR3dmlVU3JCVVpPVV85b1FMMlc0?oc=5",
+   "outlets": "レスポンス（Response.jp）・日経ビジネス電子版 ほか5"
+  },
+  {
+   "count": 7,
+   "date": "2026-11-11",
+   "title": "三井化学、ＪＳＲ獲得 石化自立で巨額買収に道",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9BdHRhQ3hxZE5ITGU2QXA0V1h0a0FLbklwaU9JMUdxYUNISzJ2YmdrOTlicjRVTlhfVHlKTjhTOWZJR0NlNVB4Um50S1dXTmNPUVE0?oc=5",
+   "outlets": "化学工業日報 電子版・時事ドットコム ほか5"
+  },
+  {
+   "count": 5,
+   "date": "2026-11-13",
+   "title": "三井化学が半導体材料大手JSRを1.8兆円で買収へ、その陰で進んだ「事業再編」と今後の化学業界の「青写真」を徹底検証",
+   "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9XYzF4am9EdDdNc0VQdFpWVmRpZ0JsT29Nc0Q2ckpONFFPR2c0UTFueGg3MmZ3WnNEZUpKMUNJUDdSSEhFa09tZkxvLVE?oc=5",
+   "outlets": "ダイヤモンド・オンライン・東洋経済オンライン ほか3"
+  },
+  {
+   "count": 3,
+   "date": "2026-11-10",
+   "title": "三井化学がJSRの買収を発表、事業売却進むライフサイエンス事業は「あらゆる選択肢の検討を継続」",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE13ZlRTY05SeUlvZVFpMVc1TDh1dV9ocEtNUHNzdWItMkZpNm00ZzBlWlZhZWJ0bk5NdXpqRFJvQ2tBR2VuRkd0T1I4OTNHNzBFcVBaOVNJV3J0cXF5b3NMWDg1SHN3UQ?oc=5",
+   "outlets": "日経バイオテクONLINE・東京報道新聞 ほか1"
+  },
+  {
+   "count": 3,
+   "date": "2026-11-09",
+   "title": "三井化学社長「半導体材料で影響力獲得」",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE50WkVZNF9JV3NXbHp1NTZSU2dJZGZhcngtRjVCV3VLQVVOTkphaXhwcnNxN0JoMjFnUmZacXEzNTl4LXNJMmNCbVpPVVVnU0xfV1pZWVNkRXdHcVk?oc=5",
+   "outlets": "下野新聞社・沖縄タイムス社 ほか1"
+  }
+ ],
+ "headlines": [
+  "三井化学会長「JSR買収で半導体軸に事業再構成」 債務減へ売却急ぐ - 日本経済新聞",
+  "三井化学が半導体材料大手JSRを1.8兆円で買収へ、その陰で進んだ「事業再編」と今後の化学業界の「青写真」を徹底検証 - ダイヤモンド・オンライン",
+  "三井化学、JSRを買収へ…半導体材料の売上規模で国内トップ級めざす - レスポンス（Response.jp）",
+  "三井化学、JSR1.8兆円買収 JICが抱く半導体「日本の牙城」に迫る危機感 - 日経ビジネス電子版",
+  "「なぜうちが？」と驚きも 三井化学が「子育てしやすい会社」2位に躍進 - 日本経済新聞",
+  "三井化学がJSRを1.8兆円で買収､自称\"買収下手\"が挑む乾坤一擲の大勝負､財務負担懸念で株価は急落 - 東洋経済オンライン",
+  "ＪＳＲ買収による財務悪化、キャッシュ創出で正常化＝三井化学ＣＦＯ - Reuters",
+  "三井化学のJSR買収、中国勢追い上げに危機感 EUV軸に半導体材料強化 - 日経クロステック",
+  "三井化学、JSR買収で膨らむ負債 「資本効率で語る」CFOの覚悟 - BigGo ファイナンス",
+  "新たな資源循環の仕組みづくり 横浜市、三井化学と連携協定 日清オイリオ - JAcom 農業協同組合新聞",
+  "三井化学、ＪＳＲ獲得 石化自立で巨額買収に道 - 化学工業日報 電子版",
+  "三井化学が1.8兆円でJSR買収 半導体材料の中核企業へ：27年度下半期中の実行目指す - EE Times Japan",
+  "なぜ、三井化学は1.8兆円で「半導体材料メーカー」を買ったのか JSR買収の狙い、市村社長が語る（1/2 ページ） - ITmedia",
+  "半導体、攻めの巨額再編 三井化学、投資先行き危ぶむ声も - 朝日新聞",
+  "三井化学がJSRの買収を発表、事業売却進むライフサイエンス事業は「あらゆる選択肢の検討を継続」 - 日経バイオテクONLINE",
+  "三井化学、JSRを買収へ 半導体市場でのプレゼンスを向上し、ICT事業の成長を加速 - 電波新聞デジタル",
+  "三井化学 ＪＳＲ買収へ １・８兆円 半導体材料 強化 - 読売新聞",
+  "三井化学がJSR買収、年400億円の利益上積み狙う 取得額1兆8400億円 - 東京報道新聞",
+  "汚泥を国産フッ素原料に 下関三井化学と中特ＨＤが共同研究協定 - 47NEWS",
+  "【注目】三井化学の1.8兆円買収で半導体再編が始まった - NewsPicks"
+ ],
+ "disclosures": [
+  {
+   "date": "2026-11-09",
+   "time": "11:00",
+   "code": "4183",
+   "name": "三井化学",
+   "title": "事業ポートフォリオの大幅な変革に向けたJSR株式会社の株式譲渡契約締結等に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261108568386.pdf",
+   "important": false,
+   "bad": false
+  },
+  {
+   "date": "2026-11-11",
+   "time": "13:00",
+   "code": "4183",
+   "name": "三井化学",
+   "title": "2027年3月期　第２四半期決算短信［IFRS］（連結）",
+   "url": "https://www.release.tdnet.info/inbs/140120261105566255.pdf",
+   "important": true,
+   "bad": false
+  },
+  {
+   "date": "2026-11-11",
+   "time": "13:00",
+   "code": "4183",
+   "name": "三井化学",
+   "title": "第２四半期業績予想と実績値との差異及び通期業績予想の修正に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261105566293.pdf",
+   "important": true,
+   "bad": false
+  },
+  {
+   "date": "2026-11-11",
+   "time": "13:00",
+   "code": "4183",
+   "name": "三井化学",
+   "title": "2026年度第2四半期(中間期)決算の概要及び2026年度業績予想の概要",
+   "url": "https://www.release.tdnet.info/inbs/140120261110572293.pdf",
+   "important": true,
+   "bad": false
+  },
+  {
+   "date": "2026-11-12",
+   "time": "09:00",
+   "code": "4183",
+   "name": "三井化学",
+   "title": "(訂正)「2026年度第２四半期（中間期）決算の概要及び2026年度業績予想の概要」の一部訂正について",
+   "url": "https://www.release.tdnet.info/inbs/140120261111574625.pdf",
+   "important": true,
+   "bad": false
+  }
+ ],
+ "calc": {
+  "fundamental": null,
+  "investor": null
+ }
+}
